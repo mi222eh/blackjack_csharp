@@ -7,6 +7,12 @@ namespace BlackJack.view
 {
     class SwedishView : IView 
     {
+        private pauseHands.IPauseHands _pauseHands;
+
+        public SwedishView()
+        {
+            _pauseHands = new pauseHands.PauseHands();    
+        }
         public void DisplayWelcomeMessage()
         {
             System.Console.Clear();
@@ -32,10 +38,12 @@ namespace BlackJack.view
                     { "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio", "tio", "knekt", "dam", "kung", "ess" };
                 System.Console.WriteLine("{0} {1}", colors[(int)a_card.GetColor()], values[(int)a_card.GetValue()]);
             }
+            _pauseHands.pause();
         }
         public void DisplayPlayerHand(IEnumerable<model.Card> a_hand, int a_score)
         {
             DisplayHand("Spelare", a_hand, a_score);
+            
         }
         public void DisplayDealerHand(IEnumerable<model.Card> a_hand, int a_score)
         {

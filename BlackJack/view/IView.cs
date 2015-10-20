@@ -5,6 +5,13 @@ using System.Text;
 
 namespace BlackJack.view
 {
+    enum Controls
+    {
+        NewGame = 'p',
+        Hit = 'h',
+        Stand = 's',
+        Quit = 'q'
+    }
     interface IView
     {
         void DisplayWelcomeMessage();
