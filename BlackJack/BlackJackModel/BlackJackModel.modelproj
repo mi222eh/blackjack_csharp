@@ -36,6 +36,12 @@
     <Content Include="ModelDefinition\Package_0950.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package_1127.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1128.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="BlackJack.classdiagram">
       <SubType>Content</SubType>

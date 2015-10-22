@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="611d0dda-1055-4b6d-bca5-9dad81e292a9"
   name="model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -372,6 +372,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="4e843c66-9558-49c1-a877-5903c7ff4249"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="CardAddedObserver"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3b63a4b2-238a-4a27-87ab-59cbf8aa32d2"
+              LastKnownName="CardAddedObserver"
+              LastKnownLocation="Package_1128.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e88ab9d1-d234-4c79-a5de-6821ecd697fb"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cd77399f-a45f-4db5-8afa-27cc802e92ec"
+                  name="CardAddedObserver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>
@@ -382,6 +421,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="93c8d3fe-ede3-48c8-8f7e-820492a2d20b">
+            <classMoniker
+              Id="3b63a4b2-238a-4a27-87ab-59cbf8aa32d2"
+              LastKnownName="CardAddedObserver"
+              LastKnownLocation="Package_1128.uml" />
+          </dependency>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="87296099-9a34-44e0-8455-4d19a7dd077d"
@@ -505,6 +553,12 @@
           </association>
         </targetEnds>
       </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="fe54eaad-1ce8-43eb-8fe7-c37d48ab015e"
+        LastKnownName="Util"
+        LastKnownLocation="Package_1128.uml" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

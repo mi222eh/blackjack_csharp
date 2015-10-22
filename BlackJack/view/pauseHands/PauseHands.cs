@@ -8,7 +8,7 @@ namespace BlackJack.view.pauseHands
 {
     class PauseHands : IPauseHands
     {
-        private const int sleepTime = 2000;
+        private const int sleepTime = 1000;
         public void pause()
         {
             Thread.Sleep(sleepTime);

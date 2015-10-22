@@ -1,19 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ce6ab5ad-19fd-4084-80ad-80094c6e032b" name="BlackJack" linkedPackageId="c879b0ba-216b-4f86-a1b3-4869d9637133" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
-  <profileInstances>
-    <packageHasProfileInstances Id="2bf60460-03bc-4e63-952b-de9c994e7f2e">
-      <profileInstance Id="6f3c822f-97c6-40dc-b40d-1b1d710f3f3a" name="StandardProfileL2">
-        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
-      </profileInstance>
-      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
-    </packageHasProfileInstances>
-    <packageHasProfileInstances Id="3d43105f-cf22-44f0-b413-965ff7a663d4">
-      <profileInstance Id="7cd8b8e8-c867-4557-8673-8948b0c64a4f" name="StandardProfileL3">
-        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
-      </profileInstance>
-      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
-    </packageHasProfileInstances>
-  </profileInstances>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="ce6ab5ad-19fd-4084-80ad-80094c6e032b" name="BlackJack" linkedPackageId="c879b0ba-216b-4f86-a1b3-4869d9637133" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="67210203-217c-4952-b91e-e329c1623f52" name="controller">
@@ -72,7 +58,48 @@
                   <elementDefinition Id="1df8f863-00dd-4dd2-b01c-2e5b09eed6f1" />
                 </interfaceRealization>
               </suppliersInternal>
+              <targetEnds>
+                <association Id="729a6591-bcae-430d-9be8-99c958d333b9" isDerived="false" sourceEndRoleName="SwedishView" targetEndRoleName="PauseHands" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="f64413d2-5c20-4733-8e78-74ae914750c9" LastKnownName="PauseHands" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2074b5e8-691e-4f72-ab4c-0beef95b2c53" name="SwedishView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="95a7c0e9-96ba-438b-afff-237315d063cc" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1d8c6802-99c0-427d-bfd3-af18b7113059" name="PauseHands" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="659a9eca-56b3-46a8-9436-3a021d2a7a6f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="c97f14b7-a2d1-4c92-989f-4491a17ffa03" />
+                </association>
+              </targetEnds>
             </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="54df82c3-d61c-4070-94e0-67538979696e" name="pauseHands">
+              <elementDefinition Id="064743f0-60cc-4b16-a166-cbe1403fc9cf" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <Interface Id="8b1b0587-b4ce-4986-a33d-e3211827db39" name="IPauseHands" isAbstract="false" isLeaf="false">
+                    <elementDefinition Id="c42b7229-25c7-4e56-9791-35e922f1ebfc" />
+                  </Interface>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="f64413d2-5c20-4733-8e78-74ae914750c9" name="PauseHands" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="2dccb2bc-1f2d-454a-8198-9144c2c414c7" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="3c61cf0c-f228-4ee5-b241-9863a53d3ac3">
+                        <interfaceMoniker Id="8b1b0587-b4ce-4986-a33d-e3211827db39" LastKnownName="IPauseHands" />
+                        <elementDefinition Id="a70d9103-71bc-4d70-9858-2691c6eee0d5" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
           </packageHasNamedElement>
         </packagedElements>
       </package>
@@ -144,6 +171,17 @@
                         <classMoniker Id="66dbb5c1-8fee-4479-bae9-38c874f43ffe" LastKnownName="BasicHitStrategy" />
                         <elementDefinition Id="b84f68a1-bf94-4f25-968c-950ccefeeca8" />
                       </dependency>
+                    </suppliersInternal>
+                  </class>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="8a7c1bdd-2e3a-4454-ba2d-cd525e377d82" name="Soft17" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="9c0cdf5d-8e5a-47ef-b0ea-3dd314d1fc1b" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="ab36c8f4-f204-44e9-817d-1eedb5b7b089">
+                        <interfaceMoniker Id="22acfdec-0761-4843-b8bc-fed534391061" LastKnownName="IHitStrategy" />
+                        <elementDefinition Id="c209969b-0bde-4fb2-ad71-f3a48fc8edbe" />
+                      </interfaceRealization>
                     </suppliersInternal>
                   </class>
                 </packageHasNamedElement>
@@ -322,6 +360,22 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="4e104d3a-3dd0-4e57-b8cb-0ec9d65fa0ab" />
                 </association>
+                <association Id="0a93bff3-c73c-4787-a257-4eac8f839e74" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="CardAddedObserver" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="113061c6-0df5-40e2-bb60-99a47d0206cb" LastKnownName="CardAddedObserver" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c327a144-65a8-4fb6-b77f-a720f546641a" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="e88ab9d1-d234-4c79-a5de-6821ecd697fb" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="73dd2bb2-4c78-4e64-8180-9c121810d754" name="CardAddedObserver" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="cd77399f-a45f-4db5-8afa-27cc802e92ec" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="4e843c66-9558-49c1-a877-5903c7ff4249" />
+                </association>
               </targetEnds>
             </class>
           </packageHasNamedElement>
@@ -371,6 +425,12 @@
           <packageHasNamedElement>
             <class Id="7a87146f-5a18-4aac-acf0-1737540224bb" name="Game" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="08739ce8-677c-41a8-b0cf-e6796231e3a0" />
+              <suppliersInternal>
+                <dependency Id="d5dc2f69-6402-4df8-a8d8-102580146402">
+                  <classMoniker Id="113061c6-0df5-40e2-bb60-99a47d0206cb" LastKnownName="CardAddedObserver" />
+                  <elementDefinition Id="93c8d3fe-ede3-48c8-8f7e-820492a2d20b" />
+                </dependency>
+              </suppliersInternal>
               <targetEnds>
                 <association Id="9b2ee47a-7e95-4105-8047-a7a25b616f03" isDerived="false" sourceEndRoleName="" targetEndRoleName="m_player" isLeaf="false" isAbstract="false">
                   <classMoniker Id="5008487d-acb2-4d99-b615-b610fd487a16" LastKnownName="Player" />
@@ -447,11 +507,42 @@
               </targetEnds>
             </class>
           </packageHasNamedElement>
+          <packageHasNamedElement>
+            <package Id="761e2eb5-7766-4983-83ea-fdd6fa5d6e37" name="Util">
+              <elementDefinition Id="fe54eaad-1ce8-43eb-8fe7-c37d48ab015e" />
+              <packagedElements>
+                <packageHasNamedElement>
+                  <class Id="113061c6-0df5-40e2-bb60-99a47d0206cb" name="CardAddedObserver" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="3b63a4b2-238a-4a27-87ab-59cbf8aa32d2" />
+                  </class>
+                </packageHasNamedElement>
+              </packagedElements>
+            </package>
+          </packageHasNamedElement>
         </packagedElements>
       </package>
     </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f0d625e5-92fd-40a2-83d4-aee30743da6c" name="Class1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ad82152b-dc6d-42e0-b9d3-24909674b1db" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
   </packagedElements>
   <package Id="c879b0ba-216b-4f86-a1b3-4869d9637133" name="BlackJackModel">
     <elementDefinition Id="46f1f7dc-7d54-44d9-b2ed-cc4ff28044bd" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2bf60460-03bc-4e63-952b-de9c994e7f2e">
+        <profileInstance Id="6f3c822f-97c6-40dc-b40d-1b1d710f3f3a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="3d43105f-cf22-44f0-b413-965ff7a663d4">
+        <profileInstance Id="7cd8b8e8-c867-4557-8673-8948b0c64a4f" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
   </package>
 </logicalClassDesignerModel>

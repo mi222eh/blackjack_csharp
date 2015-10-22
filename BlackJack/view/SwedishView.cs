@@ -8,6 +8,7 @@ namespace BlackJack.view
     class SwedishView : IView 
     {
         private pauseHands.IPauseHands _pauseHands;
+        private model.util.CardAddedObserver _ob;
 
         public SwedishView()
         {
@@ -19,6 +20,11 @@ namespace BlackJack.view
             System.Console.WriteLine("Hej Black Jack Världen");
             System.Console.WriteLine("----------------------");
             System.Console.WriteLine("Skriv 'p' för att Spela, 'h' för nytt kort, 's' för att stanna 'q' för att avsluta\n");
+        }
+
+        public void addObserver(model.util.CardAddedObserver ob)
+        {
+            _ob = ob;
         }
         public int GetInput()
         {
@@ -38,7 +44,6 @@ namespace BlackJack.view
                     { "två", "tre", "fyra", "fem", "sex", "sju", "åtta", "nio", "tio", "knekt", "dam", "kung", "ess" };
                 System.Console.WriteLine("{0} {1}", colors[(int)a_card.GetColor()], values[(int)a_card.GetValue()]);
             }
-            _pauseHands.pause();
         }
         public void DisplayPlayerHand(IEnumerable<model.Card> a_hand, int a_score)
         {
@@ -67,6 +72,9 @@ namespace BlackJack.view
             System.Console.WriteLine("{0} Har: ", a_name);
             foreach (model.Card c in a_hand)
             {
+                if(_ob.isCardAdded(c)){
+                    _pauseHands.pause();
+                }
                 DisplayCard(c);
             }
             System.Console.WriteLine("Poäng: {0}", a_score);

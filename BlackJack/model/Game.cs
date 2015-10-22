@@ -16,6 +16,12 @@ namespace BlackJack.model
             m_player = new Player();
         }
 
+        public void attachObserver(util.CardAddedObserver ob)
+        {
+            m_dealer.addObserver(ob);
+            m_player.addObserver(ob);
+        }
+
         public bool IsGameOver()
         {
             return m_dealer.IsGameOver();

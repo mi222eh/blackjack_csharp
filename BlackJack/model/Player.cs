@@ -5,14 +5,24 @@ using System.Text;
 
 namespace BlackJack.model
 {
+    enum state {
+        Nohting,
+        NewCard
+    }
     class Player
     {
         private List<Card> m_hand = new List<Card>();
+        private util.CardAddedObserver _ob = new util.CardAddedObserver();
 
         public void DealCard(Card a_card)
         {
             m_hand.Add(a_card);
-            hej.change();
+            _ob.setCardIsAdded(a_card);
+        }
+
+        public void addObserver(util.CardAddedObserver ob)
+        {
+            _ob = ob;
         }
 
         public IEnumerable<Card> GetHand()

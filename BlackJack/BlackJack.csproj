@@ -89,6 +89,7 @@
     <Compile Include="view\pauseHands\PauseHands.cs" />
     <Compile Include="view\SimpleView.cs" />
     <Compile Include="view\SwedishView.cs" />
+    <Compile Include="model\util\CardAddedObserver.cs" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">

@@ -8,6 +8,11 @@ namespace BlackJack.view
     class SimpleView : IView
     {
 
+        public void addObserver(model.util.CardAddedObserver ob)
+        {
+
+        }
+
         public void DisplayWelcomeMessage()
         {
             System.Console.Clear();
