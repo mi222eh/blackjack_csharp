@@ -95,10 +95,31 @@
               LastKnownLocation="Package2_0950.uml" />
           </dependency>
           <dependency
-            Id="b84f68a1-bf94-4f25-968c-950ccefeeca8">
+            Id="8481107f-e7a5-4403-9e85-0acc3a277b1c">
+            <classMoniker
+              Id="9c0cdf5d-8e5a-47ef-b0ea-3dd314d1fc1b"
+              LastKnownName="Soft17"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
+          <dependency
+            Id="c3a9a613-22c8-4adf-810e-64545acd95f2">
             <classMoniker
               Id="7f7945c2-00d1-4ff2-9261-fdd4e8156c06"
               LastKnownName="BasicHitStrategy"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
+          <dependency
+            Id="4cede833-4940-4f24-bd77-9d12bf62c212">
+            <classMoniker
+              Id="138a92ce-55d3-484a-bfba-d4df346fdff1"
+              LastKnownName="DealerWinnerRule"
+              LastKnownLocation="Package2_0950.uml" />
+          </dependency>
+          <dependency
+            Id="5698814a-3026-4166-8000-10ea6b744ece">
+            <classMoniker
+              Id="5d88b608-1581-4821-8a52-12b3767ce934"
+              LastKnownName="PlayerWinnerRule"
               LastKnownLocation="Package2_0950.uml" />
           </dependency>
         </suppliersInternal>
@@ -117,6 +138,57 @@
             <interfaceMoniker
               Id="550cd927-6beb-4715-ac7e-1afec083ec6b"
               LastKnownName="IHitStrategy"
+              LastKnownLocation="Package2_0950.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d53729a5-66ab-4885-b35b-eaac55118692"
+        name="IWinRule"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="138a92ce-55d3-484a-bfba-d4df346fdff1"
+        name="DealerWinnerRule"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="4abdfa68-ec0a-47a5-9d2c-760694aee9f6">
+            <interfaceMoniker
+              Id="9452fcad-6ae7-4112-9be1-4b40ca6b2a78"
+              LastKnownName="IWinRule"
+              LastKnownLocation="Package2_0950.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="9452fcad-6ae7-4112-9be1-4b40ca6b2a78"
+        name="IWinRule"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="5d88b608-1581-4821-8a52-12b3767ce934"
+        name="PlayerWinnerRule"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="c45319a7-3906-44e4-802d-a8cc662db3af">
+            <interfaceMoniker
+              Id="9452fcad-6ae7-4112-9be1-4b40ca6b2a78"
+              LastKnownName="IWinRule"
               LastKnownLocation="Package2_0950.uml" />
           </interfaceRealization>
         </suppliersInternal>

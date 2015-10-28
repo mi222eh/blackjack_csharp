@@ -10,7 +10,49 @@
         name="CardAddedObserver"
         isAbstract="false"
         isLeaf="false"
-        isActiveClass="false" />
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="67c8e971-90c1-46c7-a377-467edf472af0"
+            isDerived="false"
+            sourceEndRoleName="CardAddedObserver"
+            targetEndRoleName="cardAdded"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="a6713820-b5ef-4e7b-9982-6130438f8429"
+              LastKnownName="Card"
+              LastKnownLocation="Package1_0950.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="401bd3e9-f63b-468b-ba23-dfe8b4d4fe73"
+                  name="CardAddedObserver"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="199e4964-2fbb-46c3-816e-98c165c6cae9"
+                  name="cardAdded"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
     </packageHasNamedElement>
   </packagedElements>
 </package>

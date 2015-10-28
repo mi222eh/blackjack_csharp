@@ -226,6 +226,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="bb787092-14c0-4ba6-9a08-3c55de43e4e7"
+            isDerived="false"
+            sourceEndRoleName="Dealer"
+            targetEndRoleName="m_winRule"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="9452fcad-6ae7-4112-9be1-4b40ca6b2a78"
+              LastKnownName="IWinRule"
+              LastKnownLocation="Package2_0950.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8bd9d1cd-6035-4199-9c18-b984569a7fd2"
+                  name="Dealer"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3b4c5a33-3bf3-4d8c-8ccc-21f9eeb764fd"
+                  name="m_winRule"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>

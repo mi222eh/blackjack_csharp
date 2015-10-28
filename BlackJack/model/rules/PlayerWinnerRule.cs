@@ -5,7 +5,7 @@ using System.Text;
 
 namespace BlackJack.model.rules
 {
-    class WinRule : IWinRule
+    class PlayerWinnerRule : IWinRule
     {
         
 

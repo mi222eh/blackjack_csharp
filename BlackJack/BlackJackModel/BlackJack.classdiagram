@@ -75,6 +75,22 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="c97f14b7-a2d1-4c92-989f-4491a17ffa03" />
                 </association>
+                <association Id="c05b4836-e222-48b6-8b1f-07c05c6ee18f" isDerived="false" sourceEndRoleName="SwedishView" targetEndRoleName="_ob" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="113061c6-0df5-40e2-bb60-99a47d0206cb" LastKnownName="CardAddedObserver" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4b13b82b-8719-4dbf-af93-c10353bc9245" name="SwedishView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="50507eac-49c4-4cdb-a8c2-d1517e9628c2" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1ff2a463-cd3e-448e-b36f-d13cb3c09426" name="_ob" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="4a9ee8af-d6d1-4913-84b7-33e6a98a69aa" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="0772ee76-1b3c-4ef5-8a7f-4caa1d2435f3" />
+                </association>
               </targetEnds>
             </class>
           </packageHasNamedElement>
@@ -167,9 +183,21 @@
                         <classMoniker Id="8110c67e-5e31-425c-93d5-db6f4c35fbd7" LastKnownName="AmericanNewGameStrategy" />
                         <elementDefinition Id="2aa7438f-adca-4f5b-b841-bf65d21ffa3e" />
                       </dependency>
-                      <dependency Id="5a51f415-d9a0-4781-a253-a9116251b5ae">
+                      <dependency Id="70b519d9-4308-47b4-b30a-050ceb9d65a7">
+                        <classMoniker Id="8a7c1bdd-2e3a-4454-ba2d-cd525e377d82" LastKnownName="Soft17" />
+                        <elementDefinition Id="8481107f-e7a5-4403-9e85-0acc3a277b1c" />
+                      </dependency>
+                      <dependency Id="e6ac601c-3a0d-468b-9bb4-908ed7876318">
                         <classMoniker Id="66dbb5c1-8fee-4479-bae9-38c874f43ffe" LastKnownName="BasicHitStrategy" />
-                        <elementDefinition Id="b84f68a1-bf94-4f25-968c-950ccefeeca8" />
+                        <elementDefinition Id="c3a9a613-22c8-4adf-810e-64545acd95f2" />
+                      </dependency>
+                      <dependency Id="cb47a28d-8eeb-4e02-88f8-93e4e9be574d">
+                        <classMoniker Id="963a4a3a-7944-4bd0-b62d-d9fabff38c04" LastKnownName="DealerWinnerRule" />
+                        <elementDefinition Id="4cede833-4940-4f24-bd77-9d12bf62c212" />
+                      </dependency>
+                      <dependency Id="2fe2f1f5-0066-427b-a5ab-c1ccb3204b02">
+                        <classMoniker Id="c1bbd4ef-2dcd-47f9-ac1c-279a34c09c49" LastKnownName="PlayerWinnerRule" />
+                        <elementDefinition Id="5698814a-3026-4166-8000-10ea6b744ece" />
                       </dependency>
                     </suppliersInternal>
                   </class>
@@ -181,6 +209,33 @@
                       <interfaceRealization Id="ab36c8f4-f204-44e9-817d-1eedb5b7b089">
                         <interfaceMoniker Id="22acfdec-0761-4843-b8bc-fed534391061" LastKnownName="IHitStrategy" />
                         <elementDefinition Id="c209969b-0bde-4fb2-ad71-f3a48fc8edbe" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                  </class>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="963a4a3a-7944-4bd0-b62d-d9fabff38c04" name="DealerWinnerRule" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="138a92ce-55d3-484a-bfba-d4df346fdff1" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="cb816df8-c325-4c9c-aa8c-d32d2f40d822">
+                        <interfaceMoniker Id="8e911920-4cc9-4a3e-97d9-3abf8aa7b8a6" LastKnownName="IWinRule" />
+                        <elementDefinition Id="4abdfa68-ec0a-47a5-9d2c-760694aee9f6" />
+                      </interfaceRealization>
+                    </suppliersInternal>
+                  </class>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <Interface Id="8e911920-4cc9-4a3e-97d9-3abf8aa7b8a6" name="IWinRule" isAbstract="false" isLeaf="false">
+                    <elementDefinition Id="9452fcad-6ae7-4112-9be1-4b40ca6b2a78" />
+                  </Interface>
+                </packageHasNamedElement>
+                <packageHasNamedElement>
+                  <class Id="c1bbd4ef-2dcd-47f9-ac1c-279a34c09c49" name="PlayerWinnerRule" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="5d88b608-1581-4821-8a52-12b3767ce934" />
+                    <suppliersInternal>
+                      <interfaceRealization Id="7a80eda0-1e35-45f1-b4ef-7368ec2f884c">
+                        <interfaceMoniker Id="8e911920-4cc9-4a3e-97d9-3abf8aa7b8a6" LastKnownName="IWinRule" />
+                        <elementDefinition Id="c45319a7-3906-44e4-802d-a8cc662db3af" />
                       </interfaceRealization>
                     </suppliersInternal>
                   </class>
@@ -316,6 +371,22 @@
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="e57045bc-7b13-49b4-8760-d3f0a1a89346" />
+                </association>
+                <association Id="9731169b-a977-4738-9edc-df9783dc657e" isDerived="false" sourceEndRoleName="Dealer" targetEndRoleName="m_winRule" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="8e911920-4cc9-4a3e-97d9-3abf8aa7b8a6" LastKnownName="IWinRule" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e9865497-dc88-4d7e-af3b-6255cce9b038" name="Dealer" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="8bd9d1cd-6035-4199-9c18-b984569a7fd2" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="0177254a-0398-4a5c-a5a8-4f1ed7831db5" name="m_winRule" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="3b4c5a33-3bf3-4d8c-8ccc-21f9eeb764fd" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="bb787092-14c0-4ba6-9a08-3c55de43e4e7" />
                 </association>
               </targetEnds>
             </class>
@@ -514,6 +585,24 @@
                 <packageHasNamedElement>
                   <class Id="113061c6-0df5-40e2-bb60-99a47d0206cb" name="CardAddedObserver" isAbstract="false" isLeaf="false" isActiveClass="false">
                     <elementDefinition Id="3b63a4b2-238a-4a27-87ab-59cbf8aa32d2" />
+                    <targetEnds>
+                      <association Id="59fa9144-a2ea-44b4-ba58-233ebb05f0a8" isDerived="false" sourceEndRoleName="CardAddedObserver" targetEndRoleName="cardAdded" isLeaf="false" isAbstract="false">
+                        <classMoniker Id="04673482-5b9b-481b-8cfb-351cb3a35bff" LastKnownName="Card" />
+                        <relationshipOwnedElementsInternal>
+                          <associationHasOwnedEnds>
+                            <memberEnd Id="cf8b9bc5-54a4-4450-90d3-168f2cc7a5f8" name="CardAddedObserver" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                              <elementDefinition Id="401bd3e9-f63b-468b-ba23-dfe8b4d4fe73" />
+                            </memberEnd>
+                          </associationHasOwnedEnds>
+                          <associationHasOwnedEnds>
+                            <memberEnd Id="0e9bff11-87cf-4788-9f4f-3f6adaf5d617" name="cardAdded" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                              <elementDefinition Id="199e4964-2fbb-46c3-816e-98c165c6cae9" />
+                            </memberEnd>
+                          </associationHasOwnedEnds>
+                        </relationshipOwnedElementsInternal>
+                        <elementDefinition Id="67c8e971-90c1-46c7-a377-467edf472af0" />
+                      </association>
+                    </targetEnds>
                   </class>
                 </packageHasNamedElement>
               </packagedElements>

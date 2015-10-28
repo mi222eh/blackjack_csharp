@@ -95,6 +95,45 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="0772ee76-1b3c-4ef5-8a7f-4caa1d2435f3"
+            isDerived="false"
+            sourceEndRoleName="SwedishView"
+            targetEndRoleName="_ob"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="3b63a4b2-238a-4a27-87ab-59cbf8aa32d2"
+              LastKnownName="CardAddedObserver"
+              LastKnownLocation="Package_1128.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="50507eac-49c4-4cdb-a8c2-d1517e9628c2"
+                  name="SwedishView"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4a9ee8af-d6d1-4913-84b7-33e6a98a69aa"
+                  name="_ob"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>

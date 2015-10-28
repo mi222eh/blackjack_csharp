@@ -8,10 +8,15 @@ namespace BlackJack.model.rules
     class InternationalNewGameStrategy : INewGameStrategy
     {
 
-        public bool NewGame(Deck a_deck, Dealer a_dealer, Player a_player)
+        public bool NewGame(Dealer a_dealer, Player a_player)
         {
-            Card c;
+            //Card c;
 
+            a_dealer.GetShowDeal(a_player, true);
+            a_dealer.GetShowDeal(a_dealer, true);
+            a_dealer.GetShowDeal(a_player, true);
+
+            /*
             c = a_deck.GetCard();
             c.Show(true);
             a_player.DealCard(c);
@@ -23,6 +28,7 @@ namespace BlackJack.model.rules
             c = a_deck.GetCard();
             c.Show(true);
             a_player.DealCard(c);
+             */ 
 
             return true;
         }
