@@ -15,13 +15,6 @@ namespace BlackJack.model
             m_dealer = new Dealer(new rules.RulesFactory());
             m_player = new Player();
         }
-
-        public void attachObserver(util.CardAddedObserver ob)
-        {
-            m_dealer.addObserver(ob);
-            m_player.addObserver(ob);
-        }
-
         public bool IsGameOver()
         {
             return m_dealer.IsGameOver();
@@ -66,6 +59,12 @@ namespace BlackJack.model
         public int GetPlayerScore()
         {
             return m_player.CalcScore();
+        }
+
+        public void addSubject(ISubject sub)
+        {
+            m_dealer.addSubject(sub);
+            m_player.addSubject(sub);
         }
     }
 }

@@ -6,25 +6,19 @@ using System.Text;
 namespace BlackJack.model
 {
     enum state {
-        Nohting,
+        Nothing,
         NewCard
     }
-    class Player
+    class Player : IObserver
     {
         private List<Card> m_hand = new List<Card>();
-        private util.CardAddedObserver _ob = new util.CardAddedObserver();
+        private ISubject _subject;
 
         public void DealCard(Card a_card)
         {
             m_hand.Add(a_card);
-            _ob.setCardIsAdded(a_card);
+            cardAdded(a_card);
         }
-
-        public void addObserver(util.CardAddedObserver ob)
-        {
-            _ob = ob;
-        }
-
         public IEnumerable<Card> GetHand()
         {
             return m_hand.Cast<Card>();
@@ -68,6 +62,16 @@ namespace BlackJack.model
             }
 
             return score;
+        }
+
+        public void addSubject(ISubject sub)
+        {
+            _subject = sub;   
+        }
+
+        public void cardAdded(Card card)
+        {
+            _subject.recieveNewCard(card);
         }
     }
 }

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm4="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm5="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="611d0dda-1055-4b6d-bca5-9dad81e292a9"
   name="model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -229,7 +229,7 @@
           <association
             Id="bb787092-14c0-4ba6-9a08-3c55de43e4e7"
             isDerived="false"
-            sourceEndRoleName="Dealer"
+            sourceEndRoleName=""
             targetEndRoleName="m_winRule"
             isLeaf="false"
             isAbstract="false">
@@ -241,7 +241,6 @@
               <associationHasOwnedEnds>
                 <memberEnd
                   Id="8bd9d1cd-6035-4199-9c18-b984569a7fd2"
-                  name="Dealer"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -348,6 +347,15 @@
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="a43e251f-e971-4976-a303-88ee4fae3584">
+            <interfaceMoniker
+              Id="88e9afc1-d896-4dc3-913d-98a1d0d53cda"
+              LastKnownName="IObserver"
+              LastKnownLocation="Package1_0950.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
         <targetEnds>
           <association
             Id="4e104d3a-3dd0-4e57-b8cb-0ec9d65fa0ab"
@@ -450,6 +458,44 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+          <association
+            Id="d2799fb8-bcd1-4bc1-8325-8064af2c52f3"
+            isDerived="false"
+            sourceEndRoleName=""
+            targetEndRoleName="_subject"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="501b1b2b-2d48-43ec-86f0-ba62ac161645"
+              LastKnownName="ISubject"
+              LastKnownLocation="Package1_0950.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2bcb2161-4363-4f60-8b01-89f2ee1ed228"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e11d801a-ef6b-43aa-b67e-e2b695435280"
+                  name="_subject"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
         </targetEnds>
       </class>
     </packageHasNamedElement>
@@ -467,6 +513,13 @@
               Id="3b63a4b2-238a-4a27-87ab-59cbf8aa32d2"
               LastKnownName="CardAddedObserver"
               LastKnownLocation="Package_1128.uml" />
+          </dependency>
+          <dependency
+            Id="a4126c19-df27-4543-9485-f7f455707713">
+            <interfaceMoniker
+              Id="501b1b2b-2d48-43ec-86f0-ba62ac161645"
+              LastKnownName="ISubject"
+              LastKnownLocation="Package1_0950.uml" />
           </dependency>
         </suppliersInternal>
         <targetEnds>
@@ -598,6 +651,47 @@
         Id="fe54eaad-1ce8-43eb-8fe7-c37d48ab015e"
         LastKnownName="Util"
         LastKnownLocation="Package_1128.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="88e9afc1-d896-4dc3-913d-98a1d0d53cda"
+        name="IObserver"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="d693413e-61f8-4de1-8418-7e86407e8aac">
+            <interfaceMoniker
+              Id="501b1b2b-2d48-43ec-86f0-ba62ac161645"
+              LastKnownName="ISubject"
+              LastKnownLocation="Package1_0950.uml" />
+          </dependency>
+          <dependency
+            Id="417f67ef-2bcb-4075-bd04-c598d373438c">
+            <classMoniker
+              Id="a6713820-b5ef-4e7b-9982-6130438f8429"
+              LastKnownName="Card"
+              LastKnownLocation="Package1_0950.uml" />
+          </dependency>
+        </suppliersInternal>
+      </Interface>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="501b1b2b-2d48-43ec-86f0-ba62ac161645"
+        name="ISubject"
+        isAbstract="false"
+        isLeaf="false">
+        <suppliersInternal>
+          <dependency
+            Id="af2963e9-e7d7-401b-b1e7-4d646025de1e">
+            <classMoniker
+              Id="a6713820-b5ef-4e7b-9982-6130438f8429"
+              LastKnownName="Card"
+              LastKnownLocation="Package1_0950.uml" />
+          </dependency>
+        </suppliersInternal>
+      </Interface>
     </packageHasNamedElement>
   </packagedElements>
 </package>

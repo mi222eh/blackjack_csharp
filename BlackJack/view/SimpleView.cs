@@ -8,11 +8,6 @@ namespace BlackJack.view
     class SimpleView : IView
     {
 
-        public void addObserver(model.util.CardAddedObserver ob)
-        {
-
-        }
-
         public void DisplayWelcomeMessage()
         {
             System.Console.Clear();
@@ -63,6 +58,12 @@ namespace BlackJack.view
                 System.Console.WriteLine("You Won!");
             }
             
+        }
+
+
+        public void addAddedCard(model.Card cardAdded)
+        {
+            throw new NotImplementedException();
         }
     }
 }

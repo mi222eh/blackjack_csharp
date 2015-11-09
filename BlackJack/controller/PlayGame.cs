@@ -2,15 +2,18 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using BlackJack.model;
 
 namespace BlackJack.controller
 {
-    class PlayGame
+    class PlayGame: ISubject
     {
+        private view.IView _view;
+
         public bool Play(model.Game a_game, view.IView a_view)
         {
-            a_view.DisplayWelcomeMessage();
             
+            a_view.DisplayWelcomeMessage();
             a_view.DisplayDealerHand(a_game.GetDealerHand(), a_game.GetDealerScore());
             a_view.DisplayPlayerHand(a_game.GetPlayerHand(), a_game.GetPlayerScore());
 
@@ -23,7 +26,10 @@ namespace BlackJack.controller
 
             if (input == (int)view.Controls.NewGame)
             {
+                _view = a_view;
+                a_game.addSubject(this);
                 a_game.NewGame();
+                
             }
             else if (input == (int)view.Controls.Hit)
             {
@@ -35,6 +41,11 @@ namespace BlackJack.controller
             }
 
             return input != (int)view.Controls.Quit;
+        }
+
+        public void recieveNewCard(Card card)
+        {
+            _view.addAddedCard(card);
         }
     }
 }

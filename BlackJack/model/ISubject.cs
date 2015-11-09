@@ -3,10 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace BlackJack.view.pauseHands
+namespace BlackJack.model
 {
-    interface IPauseHands
+    interface ISubject
     {
-        void pause();
+        void recieveNewCard(model.Card card);
     }
 }

@@ -2,17 +2,17 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Threading;
 
 namespace BlackJack.view
 {
     class SwedishView : IView 
     {
-        private pauseHands.IPauseHands _pauseHands;
-        private model.util.CardAddedObserver _ob;
+        List<model.Card> addedCards = new List<model.Card>();
 
         public SwedishView()
         {
-            _pauseHands = new pauseHands.PauseHands();    
+   
         }
         public void DisplayWelcomeMessage()
         {
@@ -20,11 +20,6 @@ namespace BlackJack.view
             System.Console.WriteLine("Hej Black Jack Världen");
             System.Console.WriteLine("----------------------");
             System.Console.WriteLine("Skriv 'p' för att Spela, 'h' för nytt kort, 's' för att stanna 'q' för att avsluta\n");
-        }
-
-        public void addObserver(model.util.CardAddedObserver ob)
-        {
-            _ob = ob;
         }
         public int GetInput()
         {
@@ -72,13 +67,25 @@ namespace BlackJack.view
             System.Console.WriteLine("{0} Har: ", a_name);
             foreach (model.Card c in a_hand)
             {
-                if(_ob.isCardAdded(c)){
-                    _pauseHands.pause();
+                for (int i = 0; i < addedCards.Count; i++)
+                {
+                    if (c.GetColor() == addedCards[i].GetColor() && c.GetValue() == addedCards[i].GetValue())
+                    {
+                        addedCards.RemoveAt(i);
+                        Thread.Sleep(500);
+                    }
                 }
                 DisplayCard(c);
+                
             }
             System.Console.WriteLine("Poäng: {0}", a_score);
             System.Console.WriteLine("");
+        }
+
+
+        public void addAddedCard(model.Card cardAdded)
+        {
+            addedCards.Add(cardAdded);
         }
     }
 }
